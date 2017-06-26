@@ -13,8 +13,8 @@ public class LoginDaoImpl implements LoginDao {
 	@Override
 	public Boolean getBooleanByNamePsd(String name, String psd) {
 		// TODO Auto-generated method stub
-		String sql = "select * from loginMsg where name="+name;
-		
+		String sql = "select * from loginMsg where name='"+name+"' and psd='"+psd+"';";
+		System.out.println(sql);
 		Connection conn = JdbcUtil.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
