@@ -20,7 +20,7 @@
 					String name = "";
 					name = (String)request.getAttribute("flag");
 					if(name==null){
-					}else{
+					}else if(name=="false"){
 						out.print("信息错误！");
 					}
 				%>

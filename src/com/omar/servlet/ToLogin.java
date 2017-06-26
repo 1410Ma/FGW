@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.omar.biz.LoginBiz;
 import com.omar.biz.impl.LoginBizImpl;
+import com.omar.utils.PsdMd5;
 
 /**
  * Servlet implementation class login
@@ -31,13 +32,14 @@ public class ToLogin extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String name = request.getParameter("name");
-		String psd = request.getParameter("psd");
-		
+		String psd = PsdMd5.getMd5(request.getParameter("psd"));
+		System.out.println(psd);
 		LoginBiz loginBiz = new LoginBizImpl();
 		Boolean flag = loginBiz.getBooleanByNamePsd(name, psd);
+		String flag1 = Boolean.toString(flag);
 		
-		request.setAttribute("flag", flag);
-		System.out.println(flag);
+		request.setAttribute("flag", flag1);
+		System.out.println(flag1);
 		
 		if(flag){
 			request.getRequestDispatcher("index.jsp").forward(request, response);
