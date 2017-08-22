@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-This is main.jsp
+	<button onclick="javascript:window.location.href='newXM.jsp'">new </button>
+	<table border="1" cellspacing="0" width="1000px" align="center" style="text-align: center;">
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Time</td>
+			<td>Address</td>
+			<td>Cp</td>
+		</tr>
+		<tr>
+			
+		</tr>
+	</table>
 </body>
 </html>
