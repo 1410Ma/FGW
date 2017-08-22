@@ -15,7 +15,6 @@ $(function(){
 	$('#datePicker').date_input();
 	$('#datePicker2').date_input();
 	})
-onback()=
 </script>
  <form action="/createHY" method="get">
  	<table align="center" border="1">
